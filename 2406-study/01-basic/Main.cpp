@@ -47,11 +47,17 @@ int main() {
         arr[i] = i+1; // 동적 배열 사용
     }
     
-    std::cout << arr << std::endl;
+    std::cout << "배열 출력" << std::endl;
+    std::cout << arr << std::endl;//포인터 값 출력
+    std::cout << *arr << std::endl;// 첫 번째 요소 출력
     delete[] arr; // 동적 배열 반납 ( 동적 메모리 사용 후 반납 )
     std::cout << arr << std::endl;
+    std::cout << *arr << std::endl;// 댕글링 포인터 역참조 (정의되지 않은 동작
+    std::cout << "배열 출력 완료1" << std::endl;
     /// Question1. 동적 배열을 반납하고 다시 arr을 출력해도 동일한 주소가 나온다. 반납하더라도 이전 주소를 확인 가능한 것인가? 아니면 반납이 제대로 이루어지지 않은 것인가?
-    
+    /// Answer. std::cout << *arr << std::endl;는 해제된 메모리를 역참조합니다. 이 경우 정의되지 않은 동작(UB, Undefined Behavior)이 발생합니다. 여기서는 우연히 0이 출력된 것입니다. 이는 다른 값이 나올 수도 있으며, 프로그램이 비정상적으로 종료될 수도 있습니다.
+
+
     // Vector : 자동으로 메모리를 할당해주는 배열 ( 포인터를 쓰지 않아도 크기를 추후 지정 가능 + 배열의 크기 변경 가능 )
     vector<int> v = {1,2,3,4,5};
     vector<int> v1(4);
