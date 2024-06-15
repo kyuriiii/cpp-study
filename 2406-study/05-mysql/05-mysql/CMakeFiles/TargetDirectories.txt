@@ -1,0 +1,3 @@
+/Users/kyuri/Desktop/Github/cpp/cpp-study/2406-study/05-mysql/05-mysql/CMakeFiles/cppmysql.dir
+/Users/kyuri/Desktop/Github/cpp/cpp-study/2406-study/05-mysql/05-mysql/CMakeFiles/edit_cache.dir
+/Users/kyuri/Desktop/Github/cpp/cpp-study/2406-study/05-mysql/05-mysql/CMakeFiles/rebuild_cache.dir
