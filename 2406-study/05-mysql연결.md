@@ -26,11 +26,11 @@
     1. `cd /opt/homebrew/Cellar`
     2. `ls -l | grep mysql`
         
-        ![스크린샷 2024-06-14 오후 10.20.49.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6f01d0d0-2e35-421f-ba74-61266e3fbd7e/d42612ab-abf9-4850-a064-7a052856160e/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-06-14_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_10.20.49.png)
+        ![스크린샷 2024-06-14 오후 10.20.49.png](https://github.com/kyuriiii/cpp-study/assets/47288015/886051f3-472d-41e4-b44d-8659bae9cab4)
         
     3. 버전 위치로 이동 후 추후 컴파일 시 옵션으로 작성해야 하는 include와 lib 폴더 확인
         
-        ![스크린샷 2024-06-14 오후 10.23.15.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6f01d0d0-2e35-421f-ba74-61266e3fbd7e/65775d45-922a-4810-92ef-8f0541816fe9/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-06-14_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_10.23.15.png)
+        ![스크린샷 2024-06-14 오후 10.23.15.png](https://github.com/kyuriiii/cpp-study/assets/47288015/a8cd2f4a-b846-48be-ba90-39655e71a7c4)
         
 3. Compiler Check
     1. Mysql에서 아래와 같이 스키마에 접속해 테스트 테이블 생성
@@ -89,7 +89,7 @@
 1. https://downloads.mysql.com/archives/c-cpp/ 사이트에서 macOS 14 (ARM, 64-bit), DMG Archive 다운로드 후 설치
 2. 설치 위치에 `jdbc.h` 파일이 존재하는지 확인하기
     
-    ![스크린샷 2024-06-14 오후 10.55.31.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6f01d0d0-2e35-421f-ba74-61266e3fbd7e/a11510ef-2789-48f8-b917-eef2dfece436/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-06-14_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_10.55.31.png)
+    ![스크린샷 2024-06-14 오후 10.55.31.png](https://github.com/kyuriiii/cpp-study/assets/47288015/d7a0a81f-0008-4185-a5db-415eee24f07e)
     
 3. c++ 코드 작성
 
@@ -196,11 +196,11 @@ int main()
         g++ -std=c++17 -I /usr/local/mysql-connector-c++-8.3.0/include -L /usr/local/mysql-connector-c++-8.3.0/lib64 -l mysqlcppconn main.cpp -o main
         ```
         
-        ![스크린샷 2024-06-15 오전 9.13.08.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6f01d0d0-2e35-421f-ba74-61266e3fbd7e/d02432c2-98b5-4be6-ab1e-094d596a06b5/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-06-15_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_9.13.08.png)
+        ![스크린샷 2024-06-15 오전 9.13.08.png](https://github.com/kyuriiii/cpp-study/assets/47288015/fbc6f838-e511-407a-8780-11f841231582)
         
 4. Error! `Library not loaded: @rpath/libmysqlcpconn.9.dylib`
     
-    ![스크린샷 2024-06-15 오전 9.22.30.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6f01d0d0-2e35-421f-ba74-61266e3fbd7e/ab849070-cb77-4266-83a1-71703752f211/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-06-15_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_9.22.30.png)
+    ![스크린샷 2024-06-15 오전 9.22.30.png](https://github.com/kyuriiii/cpp-study/assets/47288015/8741a0ca-3137-4c8b-9eb3-018d10b8c17b)
     
     1. ~~해결방법 1. **실패**~~
         1. 컴파일 시 `@rpath` 추가할 것.
@@ -214,7 +214,7 @@ int main()
 
 1. XCode에서 프로젝트 파일 선택 후 Build Settings 탭으로 이동
     
-    ![스크린샷 2024-06-14 오후 11.18.06.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6f01d0d0-2e35-421f-ba74-61266e3fbd7e/a124bdcd-cdc7-402b-b82c-5209445c175a/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-06-14_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_11.18.06.png)
+    ![스크린샷 2024-06-14 오후 11.18.06.png](https://github.com/kyuriiii/cpp-study/assets/47288015/d010f58d-9108-4e3c-afdf-5579ef841dab)
     
 2. Build Settings 탭의 Header Search Path 항목을 찾아 아래 경로를 추가
     
@@ -222,7 +222,7 @@ int main()
     /usr/local/mysql-connector-c++-8.3.0/include
     ```
     
-    ![스크린샷 2024-06-14 오후 11.20.04.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6f01d0d0-2e35-421f-ba74-61266e3fbd7e/07c0c331-69ad-46e1-bd27-bac2f6f15f7a/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-06-14_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_11.20.04.png)
+    ![스크린샷 2024-06-14 오후 11.20.04.png](https://github.com/kyuriiii/cpp-study/assets/47288015/c4095bb1-4564-47ab-8b21-52a0a67665dd)
     
 3. Build Settings 탭의 Library Search Paths 항목을 찾아 아래의 라이브러리 경로 설정
     
@@ -230,7 +230,7 @@ int main()
     /usr/local/mysql-connector-c++-8.3.0/lib64
     ```
     
-    ![스크린샷 2024-06-14 오후 11.23.01.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/6f01d0d0-2e35-421f-ba74-61266e3fbd7e/f0782f11-4c57-4cd2-824d-429fb4e77317/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-06-14_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_11.23.01.png)
+    ![스크린샷 2024-06-14 오후 11.23.01.png](https://github.com/kyuriiii/cpp-study/assets/47288015/9ee71578-1dfb-4822-b98d-5c76c4a1207f)
     
 4. Build Phases 탭으로 이동해 Link Binary With Libraries 섹션을 찾아 +를 누르고 팝업 창에서 `Add Others...` 를 선택하고 `/usr/local/mysql-connector-c++-8.3.0/lib64/libmysqlcppconn8.dylib` 파일 추가 
     
